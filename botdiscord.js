@@ -5,7 +5,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('ready',  () => {
   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'); 
-  console.log('The bot is now online !');
+  console.log('The bot is now online ⚙️!');
   console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
   console.log(`Username : [ " ${client.user.username} " ]`);
 client.user.setStatus("dnd");
