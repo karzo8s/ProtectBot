@@ -105,7 +105,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 client.on('ready',async () => {
-let streaming = [`ProTection Mode : ON☝🏻 `, `Protection 24/7 ☝🏻`];
+let streaming = [`SystemBots⚙️ `, `Protection 24/7 ☝🏻`];
 client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
 setInterval(() => {
 client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
