@@ -90,8 +90,26 @@ client.on('message',function(message) {
 let args = message.content.split(" ").slice(1).join(" ");
 if(message.content.startsWith(prefix + "say")) {
 if(!args) return;
-message.channel.send(`${args}`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
+message.channel.send(`${args}`);
 }
+});
+
+ client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+ 
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+ 
+let args = message.content.split(" ").slice(1);
+if(!args) return message.channel.send('${prefix}say <words>'); 
+ 
+if (command == "SSsay") {
+if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**ماعندك  برمشن**");
+ 
+message.channel.send(args.join("  "))
+    message.delete();
+  }
 });
 
 client.on('ready',async () => {
