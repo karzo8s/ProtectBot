@@ -18,6 +18,14 @@ client.on('ready', () => {
   console.log('╚[════════════════════════════════════]╝')
 });
 
+
+
+
+
+
+
+
+
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "sug")) {
   await  message.channel.send(`اكتب اقتراحك الان`)
@@ -49,6 +57,7 @@ client.on('message', async message => {
               })
             }
           }) 
+
 
 client.on('message', message => {
   if(message.content.split(' ')[0] == prefix + 'bc') {
@@ -84,3 +93,13 @@ if(!args) return;
 message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
 }
 });
+
+client.on('ready',async () => {
+let streaming = [`LegendGang`, `System`];
+client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
+setInterval(() => {
+client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
+}, 5000);
+});
+
+client.login(process.env.BOT_TOKEN);
