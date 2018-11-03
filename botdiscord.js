@@ -88,7 +88,6 @@ client.on('message', message => {
 
 client.on('message',function(message) {
 let args = message.content.split(" ").slice(1).join(" ");
-if(!args) return message.channel.send('${prefix}say <words>'); 
 if(message.content.startsWith(prefix + "say")) {
 if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**ماعندك  برمشن**");
 if(!args) return;
