@@ -1,17 +1,22 @@
+const prefix ="S";
+const admin = ".";
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.login(process.env.BOT_TOKEN);
-const admin = ".";
-const prefix = "S";
-
-client.on('ready',  () => {
-  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'); 
-  console.log('The bot is now online ⚙️!');
-  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-  console.log(`Username : [ " ${client.user.username} " ]`);
-client.user.setActivity("You | Send",{type: 'WATCHING'})
-client.user.setStatus("dnd");
+client.on('ready', () => {
+  console.log('╔[════════════════════════════════════]╗');
+  console.log('')
+  console.log('            ╔[════════════]╗')
+  console.log('              Bot Is Online')
+  console.log('            ╚[════════════]╝')
+  console.log('')
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log('')
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log('')
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log('')
+  console.log('╚[════════════════════════════════════]╝')
 });
 
 client.on('message', message => {
