@@ -1,4 +1,4 @@
-const prefix ="S";
+const prefix ="*";
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -67,7 +67,7 @@ client.on('message', message => {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
         if (!args[1]) {
-    message.channel.send(`**Bbc <message>**`);
+    message.channel.send(`***bc <message>**`);
     return;
     }
             message.guild.members.forEach(m => {
