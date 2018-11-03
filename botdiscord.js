@@ -107,7 +107,7 @@ if(!args) return message.channel.send('${prefix}say <words>');
 if (command == "SSsay") {
 if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("**ماعندك  برمشن**");
  
-message.channel.send(args.join("  "))
+message.channel.send(`${args}`);
     message.delete();
   }
 });
