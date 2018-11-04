@@ -63,7 +63,7 @@ client.on('message', async message => {
 @•🚚Saller🚚• 
 ══════════════════════════════════════
                                          
-@here`)
+`)
     let filter = m => m.author.id === message.author.id
       var text = '';
         let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
@@ -71,7 +71,7 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم حفظ تقديمك الرجاء انتضار الرد من قبل الاداره`)
-                client.channels.get("508053414165348355").send(`${message.author.tag} فدم ${text}`)
+                client.channels.get("508053414165348355").send(`@${message.author.tag} فدم ${text}`)
 
               })
             }
