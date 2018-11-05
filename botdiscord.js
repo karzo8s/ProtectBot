@@ -17,15 +17,17 @@ client.on('ready', () => {
   console.log('')
   console.log('╚[════════════════════════════════════]╝')
 });
-
-
-
-
-
-
-
-
-
+///////////////////////////////////////////////////////////////-(التوكن)-///////////////////////////////////////////////////////////////
+client.login(process.env.BOT_TOKEN);
+///////////////////////////////////////////////////////////////-(صطريم)-///////////////////////////////////////////////////////////////
+client.on('ready',async () => {
+let streaming = [`LegendGang`, `System`];
+client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
+setInterval(() => {
+client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
+}, 5000);
+});
+///////////////////////////////////////////////////////////////-(كود الاقتراح)-///////////////////////////////////////////////////////////////
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "sug")) {
   await  message.channel.send(`اكتب اقتراحك الان`)
@@ -41,7 +43,7 @@ client.on('message', async message => {
               })
             }
           }) 
-
+///////////////////////////////////////////////////////////////-(كود التقديم)-///////////////////////////////////////////////////////////////
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "sub")) {
   await  message.channel.send(`**__شروط التقديم__**
@@ -79,8 +81,7 @@ ${text}`)
               })
             }
           }) 
-
-
+///////////////////////////////////////////////////////////////-(كود البرودكاست)-///////////////////////////////////////////////////////////////
 client.on('message', message => {
   if(message.content.split(' ')[0] == prefix + 'bc') {
             if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('⚠ | **لا يوجد لديك صلاحية **');
@@ -107,7 +108,7 @@ client.on('message', message => {
         return;
     }
 });
-
+///////////////////////////////////////////////////////////////-(الساي)-///////////////////////////////////////////////////////////////
 client.on('message',function(message) {
 let args = message.content.split(" ").slice(1).join(" ");
 if(message.content.startsWith(prefix + "say")) {
@@ -117,14 +118,4 @@ message.channel.send(`${args}`);
     message.delete();
 }
 });
-
-
-client.on('ready',async () => {
-let streaming = [`LegendGang`, `System`];
-client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
-setInterval(() => {
-client.user.setActivity(streaming[Math.floor(Math.random() * streaming.length)], {type: 1, url: "https://twitch.tv/6xlez1"});
-}, 5000);
-});
-
-client.login(process.env.BOT_TOKEN);
+///////////////////////////////////////////////////////////////-(ستريم)-///////////////////////////////////////////////////////////////
