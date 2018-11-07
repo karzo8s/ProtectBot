@@ -1,4 +1,4 @@
-const prefix ="*";
+const prefix ="/";
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -75,7 +75,7 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم حفظ تقديمك الرجاء انتضار الرد من قبل الاداره`)
-                client.channels.get("508053414165348355").send(`<@${message.author.tag}> قدم 
+                client.channels.get("508053414165348355").send(`${message.author} قدم 
 ${text}`)
 
               })
