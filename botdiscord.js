@@ -75,7 +75,7 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم حفظ تقديمك الرجاء انتضار الرد من قبل الاداره`)
-                client.channels.get("508053414165348355").send(`**# - New SubMint By:${message.author} 
+                client.channels.get("508053414165348355").send(`**# - New SubMint By:** ${message.author} 
 ${text}`)
 
               })
