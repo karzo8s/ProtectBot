@@ -121,6 +121,7 @@ message.channel.send(`${args}`);
 ///////////////////////////////////////////////////////////////-(بيييص)-///////////////////////////////////////////////////////////////
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "res")) {
+            if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('⚠ | **لا يوجد لديك صلاحية **');
   await  message.channel.send(`**# - النتيجة**
 
 نتيجة التقديم👨💻📕
