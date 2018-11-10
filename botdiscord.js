@@ -47,15 +47,15 @@ client.on('message', async message => {
 ///////////////////////////////////////////////////////////////-(كود التقديم)-///////////////////////////////////////////////////////////////
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "sub")) {
-  await  message.channel.send(`**__شروط التقديم__**
+  await  message.channel.send(`**__SubMint__**
 ══════════════════════════════════════
-                                         **__رتب الادارة__**
-جاوب على الأسئلة بأنك تضع رقم السؤال
-1- ? وش بتفيد السيرفر
-2-بتقدر تسوي فعالية
-3-تكتب ليش تبي الرتبة
-4- وش الرتبة الي تبيها
+                                                     **التقديم**
+جاوب على الاسئلة التالية
+1- ليش تبغا الرتببة؟؟
+2- وش بتفيد السيرفر
+3- وش الرتبة التي تريد التقديم لها؟؟
 ══════════════════════════════════════
+
                                          
 `)
     let filter = m => m.author.id === message.author.id
@@ -80,7 +80,7 @@ client.on('message', message => {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
         if (!args[1]) {
-    message.channel.send(`***bc <message>**`);
+    message.channel.send(`**/bc <message>**`);
     return;
     }
             message.guild.members.forEach(m => {
@@ -92,7 +92,7 @@ client.on('message', message => {
                 // m.send(`[${m}]`);
                 m.send({embed: bc}).catch(err => {console.log("[Broadcast] Couldn't send message to this user because he's closing his DM!")});
             });
-            message.channel.send("**📢 | يتم إرسال البرودكاست**");
+            message.channel.send("**📢 | .. .... ..  .. .. ... تم الارسال**");
     }
     } else {
         return;
