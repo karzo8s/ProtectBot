@@ -83,7 +83,7 @@ client.on('message', message => {
     }
             message.guild.members.forEach(m => {
                 var bc = new Discord.RichEmbed()
-                .setThumbnail(https://cdn.discordapp.com/attachments/501837967258550273/511823009921892363/message-icon-clipart-6.jpg)
+                .setThumbnail("https://cdn.discordapp.com/attachments/501837967258550273/511823009921892363/message-icon-clipart-6.jpg")
                 .setFooter(` مرسلة من قبل»» : ${message.author.username}#${message.author.discriminator}`)
                 .setDescription(args)
                 .setColor('RANDOM')
