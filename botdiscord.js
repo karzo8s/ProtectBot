@@ -47,15 +47,13 @@ client.on('message', async message => {
 ///////////////////////////////////////////////////////////////-(كود التقديم)-///////////////////////////////////////////////////////////////
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "sub")) {
-  await  message.channel.send(`**__SubMint__**
-══════════════════════════════════════
-                                                     **التقديم**
-جاوب على الاسئلة التالية
+  await  message.channel.send(`**__SubMint__**-**التقديم**
+جاوب على الاسئلة التالية..
 1- ليش تبغا الرتببة؟؟
 2- وش بتفيد السيرفر
 3- وش الرتبة التي تريد التقديم لها؟؟
-══════════════════════════════════════
-
+أمامك دقيقة واحدة للأجابة على الاسئلة
+${message.author}
                                          
 `)
     let filter = m => m.author.id === message.author.id
@@ -85,8 +83,8 @@ client.on('message', message => {
     }
             message.guild.members.forEach(m => {
                 var bc = new Discord.RichEmbed()
-                .setThumbnail(message.guild.iconURL)
-                .setFooter(`» مرسلة من قبل: ${message.author.username}#${message.author.discriminator}`)
+                .setThumbnail(https://cdn.discordapp.com/attachments/501837967258550273/511823009921892363/message-icon-clipart-6.jpg)
+                .setFooter(` مرسلة من قبل»» : ${message.author.username}#${message.author.discriminator}`)
                 .setDescription(args)
                 .setColor('RANDOM')
                 // m.send(`[${m}]`);
@@ -146,7 +144,7 @@ client.on('message', async message => {
           .then(co => {
             text = co.first().content
 
-              message.channel.send(`تم `)
+              message.channel.send(`تم ${message.author} `)
                 client.channels.get("508544285558439946").send(`${text}`)
 
               })
