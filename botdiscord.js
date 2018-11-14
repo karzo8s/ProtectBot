@@ -95,7 +95,7 @@ client.on("message", message => {
                         setTimeout(() => {
                           let embed = new Discord.RichEmbed()
                         .setColor('RED')
-                        .setTitle(`**📌تقديم** __**${message.guild.name}**__📌`)
+                        .setTitle(`**# New SubMint By :[ ${message.author} ]**`)
                         .addField('**`الاسم`**', `${name}` , true)
                         .addField('**`وش بيفيد السيرفر؟`**', `${age}` , true)
                         .addField('**`ليش يبي الرتبة؟`**',`${ask}`)
