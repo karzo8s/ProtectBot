@@ -86,7 +86,7 @@ client.on("message", message => {
                                       var ask2 = m4.content;
                                       m4.delete();
                                       message.channel.send( message.member + ', **:timer:**').then( (m) =>{
-                                        m.edit( message.member + ', **أسم الرتبة التي تبي تقدم لها🧐**' )
+                                        m.edit( message.member + ', **# - أسم الرتبة التي تبي تقدم لها🧐**' )
                                         m.channel.awaitMessages( m1 => m1.author == message.author,{ maxMatches: 1, time: 60*1000 } ).then ( (m5) => {
                                             m5 = m5.first();
                                             var ask3 = m5.content;
@@ -95,13 +95,13 @@ client.on("message", message => {
                         setTimeout(() => {
                           let embed = new Discord.RichEmbed()
                         .setColor('RED')
-                        .setTitle(`**# - New SubMint | تقديم جديد`)
+                        .setTitle(`**# - New SubMint | تقديم جديد**`)
                         .addField('**`الاسم`**', `${name}` , true)
                         .addField('**`وش بيفيد السيرفر؟`**', `${age}` , true)
                         .addField('**`ليش يبي الرتبة؟`**',`${ask}`)
                         .addField('**`هل سيحترم القوانين ؟`**',`${ask2}`)
                         .addField('**`اسم الرتبة`**',`${ask3}`)
-                        .setFooter(message.author,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
+                        .setFooter(message.author.username,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
                         channel.send(embed)
                         }, 2500);
                         setTimeout(() => {
