@@ -49,7 +49,7 @@ client.on("message", message => {
             if(message.content.startsWith("$تقديم")) {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
-        let channel = message.guild.channels.find("name", "التقديمات")
+        let channel = message.guild.channels.find("name", "•submint»التقديم")
             if(!channel) return message.reply("**لانشاء روم التقديمات !!setsubmissions من فضلك اكتب الامر**")
             if(channel) {
             message.channel.send( message.member + ', **:timer:**').then( (m) =>{
@@ -94,7 +94,7 @@ client.on("message", message => {
                       m.edit(message.member + ', **....جارى جمع البيانات**').then( (mtime)=>{
                         setTimeout(() => {
                           let embed = new Discord.RichEmbed()
-                        .setColor('RANDOM')
+                        .setColor('RED')
                         .setTitle(`**تقديم** [__**${message.guild.name}**__]`)
                         .addField('**`الاسم`**', `${name}` , true)
                         .addField('**`العمر`**', `${age}` , true)
