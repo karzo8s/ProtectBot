@@ -176,7 +176,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "**•# Done Cleaned The Chat**",
         footer: {
-          text: "•# AetrioSystem" // غير هنا حط اسم البوت
+          text: "•# Setro - System" // غير هنا حط اسم البوت
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -269,7 +269,7 @@ Bot Of Server Aetrio
 
 **•نتمنى قضاء وقت شيق•**`);
 
-message.channel.send('**By KarZo...:white_check_mark:__ I Send It In Ur DM ,, Check Ur DM__**');
+message.channel.send('**Setro - System \/ :white_check_mark:__ I Send It In Ur DM ,, Check Ur DM__**');
 
     }
 });
@@ -543,7 +543,7 @@ client.on('guildMemberAdd', member => {
         .addField('•🆔| User » ', "**[" + `${member.id}` + "]**" )
         .addField('•➡|Memeber» ',`${member.guild.memberCount}`)                     
         .addField('•🕣|Time Create » ', member.user.createdAt.toLocaleString(), true)                   
-     .setFooter("Aetrio Server")
+     .setFooter("Setro - Server")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -739,7 +739,7 @@ client.on('message', async message => {
           }) 
 ///////////////////////////////////////////////////////////////-(كود التقديم)-///////////////////////////////////////////////////////////////
 client.on("message", message => {
-            if(message.content.startsWith("-sub")) {
+            if(message.content.startsWith("&sub")) {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
         let channel = message.guild.channels.find("name", "submints")
